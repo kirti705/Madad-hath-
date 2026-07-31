@@ -8,6 +8,20 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
     body { background: #f5f5f5; }
     
+    /* Navbar */
+    .navbar {
+      background: #0077ff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+    .navbar h2 { font-size: 1.3rem; }
+    .navbar a { color: white; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
     /* Banner */
     .banner { 
       background: linear-gradient(135deg, #0077ff, #00c6ff); 
@@ -16,7 +30,6 @@
       padding: 50px 20px; 
     }
     .banner h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    .banner p { font-size: 1.2rem; }
 
     /* Counter */
     .counter { 
@@ -26,7 +39,6 @@
       font-size: 1.5rem; 
       font-weight: bold; 
       color: #0077ff; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     /* Cards */
@@ -37,8 +49,12 @@
       padding: 20px;
       margin-bottom: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 15px;
+      align-items: center;
     }
-    .card h3 { color: #0077ff; margin-bottom: 10px; }
+    .card img { width: 80px; height: 80px; border-radius: 10px; }
+    .card h3 { color: #0077ff; margin-bottom: 8px; }
     .card button {
       background: #ff6600;
       color: white;
@@ -48,17 +64,51 @@
       margin-top: 10px;
       cursor: pointer;
     }
-    .card button:hover { background: #e65c00; }
+
+    /* Form */
+    .form-section {
+      background: white;
+      padding: 30px 20px;
+      margin: 30px 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .form-section button {
+      background: #0077ff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
 
     /* Footer */
-    footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 30px; }
+    footer { text-align: center; padding: 20px; background: #333; color: white; }
   </style>
 </head>
 <body>
 
-  <!-- Banner Section -->
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>🤝 Madad Hath</h2>
+    <div>
+      <a href="#">Home</a>
+      <a href="#form">Madad Chahiye</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
   <div class="banner">
-    <h1>🤝 Madad Hath</h1>
+    <h1>Madad Hath</h1>
     <p>Har haath tak madad pahunchana hamara lakshya hai</p>
   </div>
 
@@ -70,28 +120,12 @@
   <!-- Help Cards -->
   <div class="container">
     <div class="card">
-      <h3>Khane ki Madad</h3>
-      <p>Ek parivar ko 1 hafte ke ration ki zarurat hai. Patna, Bihar</p>
-      <button>Madad Karein</button>
+      <img src="https://img.icons8.com/color/96/rice-bowl.png" alt="khana">
+      <div>
+        <h3>Khane ki Madad</h3>
+        <p>Ek parivar ko 1 hafte ke ration ki zarurat hai. Patna, Bihar</p>
+        <button>Madad Karein</button>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Padhai ke liye Kitab</h3>
-      <p>Class 10 ke student ko books chahiye. Jaipur, Rajasthan</p>
-      <button>Madad Karein</button>
-    </div>
-
-    <div class="card">
-      <h3>Medical Help</h3>
-      <p>Budhi maa ka ilaj ke liye sahyog chahiye. Delhi</p>
-      <button>Madad Karein</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    © 2026 Madad Hath | Banaya gaya by Kirti
-  </footer>
-
-</body>
-</html>
+    <div
